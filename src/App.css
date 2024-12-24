@@ -2,13 +2,56 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 30px;
+}
+
+.card {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  border: thick double #b9c0d0;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: 2px 2px #c1c1c1, -1em 0 .4em rgb(239, 239, 239);
+
+  background: linear-gradient(217deg,
+      rgba(231, 207, 207, 0.8),
+      rgba(255, 0, 0, 0) 70.71%),
+    linear-gradient(127deg, rgba(191, 208, 191, 0.8), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, rgba(204, 204, 224, 0.8), rgba(0, 0, 255, 0) 70.71%);
+}
+
+.card__title-name {
+  font-size: 1.4em;
+  display: flex;
+  justify-content: center;
+}
+
+.card__text {
+  margin: 5px 0;
+}
+
+.infotext {
+  text-align: justify;
+}
+
+.card__img,
+.rating-wrap {
+  margin: 10px 0;
 }
 
 .rating-wrap {
   overflow: hidden;
-  width: 265px;
   margin: 0 auto;
+  position: relative;
+  padding: 20px 0;
 }
 
 .rating-wrap:not(:checked)>input {

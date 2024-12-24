@@ -2,14 +2,25 @@ const Card = (props) => {
   return (
     <div className="card">
       <h4 className="card__title-name">{props.name}</h4>
-      <p className="card__text">{props.universe}</p>
-      <p className="card__text">{props.alterego}</p>
-      <p className="card__text">{props.occupation}</p>
-      <p className="card__text">{props.friends}</p>
-      <p className="card__text">{props.alterego}</p>
-      <p className="card__text">{props.superpowers}</p>
-      <img src={props.url} alt={props.name} />
-      <p className="card__text">{props.info}</p>
+      <p className="card__text">
+        <b>Вселенная:</b> {props.universe}
+      </p>
+      <p className="card__text">
+        <b>Альтер эго:</b>  {props.alterego}
+      </p>
+      <p className="card__text">
+        <b>Род занятий:</b>  {props.occupation}
+      </p>
+      <p className="card__text">
+        <b>Друзья:</b> {props.friends}
+      </p>
+      <p className="card__text">
+        <b>Суперсилы:</b>  {props.superpowers}
+      </p>
+      <img src={props.url} alt={props.name} className="card__img" />
+      <p className="card__text infotext">
+        {props.info}
+      </p>
       <div className="rating-wrap">
         <input type="radio" id="star-5" name="rating" value="5" />
         <label htmlFor="star-5" title="Оценка «5»"></label>
